@@ -1,0 +1,1 @@
+# outlook-to-obsidian
