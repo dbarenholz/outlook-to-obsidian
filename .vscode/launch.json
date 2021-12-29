@@ -1,0 +1,153 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug UI Tests",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "-u",
+        "bdd",
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/test/end-to-end",
+        "-r",
+        "ts-node/register",
+        "${workspaceFolder}/test/end-to-end/*.ts"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "runtimeArgs": [
+        "--preserve-symlinks"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Unit Tests",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "-u",
+        "bdd",
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/test/unit",
+        "-r",
+        "ts-node/register",
+        "${workspaceFolder}/test/unit/*.test.ts"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "runtimeArgs": [
+        "--preserve-symlinks"
+      ]
+    },
+    {
+      "name": "Excel Desktop (Edge Chromium)",
+      "type": "edge",
+      "request": "attach",
+      "useWebView": "advanced",
+      "port": 9229,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: Excel Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "Excel Desktop (Edge Legacy)",
+      "type": "office-addin",
+      "request": "attach",
+      "url": "https://localhost:3000/taskpane.html?_host_Info=Excel$Win32$16.01$en-US$$$$0",
+      "port": 9222,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: Excel Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "Outlook Desktop (Edge Chromium)",
+      "type": "pwa-msedge",
+      "request": "attach",
+      "useWebView": true,
+      "port": 9229,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: Outlook Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "Outlook Desktop (Edge Legacy)",
+      "type": "office-addin",
+      "request": "attach",
+      "url": "https://localhost:3000/taskpane.html?_host_Info=Outlook$Win32$16.01$en-US$$$$0",
+      "port": 9222,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: Outlook Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "PowerPoint Desktop (Edge Chromium)",
+      "type": "edge",
+      "request": "attach",
+      "useWebView": "advanced",
+      "port": 9229,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: PowerPoint Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "PowerPoint Desktop (Edge Legacy)",
+      "type": "office-addin",
+      "request": "attach",
+      "url": "https://localhost:3000/taskpane.html?_host_Info=PowerPoint$Win32$16.01$en-US$$$$0",
+      "port": 9222,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: PowerPoint Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "Word Desktop (Edge Chromium)",
+      "type": "edge",
+      "request": "attach",
+      "useWebView": "advanced",
+      "port": 9229,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: Word Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "Word Desktop (Edge Legacy)",
+      "type": "office-addin",
+      "request": "attach",
+      "url": "https://localhost:3000/taskpane.html?_host_Info=Word$Win32$16.01$en-US$$$$0",
+      "port": 9222,
+      "timeout": 600000,
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "Debug: Word Desktop",
+      "postDebugTask": "Stop Debug"
+    },
+    {
+      "name": "Office Online (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Debug: Web"
+    },
+    {
+      "name": "Office Online (Edge Chromium)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Debug: Web"
+    }
+  ]
+}
