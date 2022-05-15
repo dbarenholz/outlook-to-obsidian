@@ -1,3 +1,5 @@
+**NO LONGER INTERESTED IN CREATING/MAINTAINING.** If anyone else wants to give this a shot, you're more than welcome to copy-paste without giving credit!
+
 # Send to Obsidian
 
 This is an Outlook addin (read: plugin) that sends the currently opened/selected emailchain as a markdown note to Obsidian.
